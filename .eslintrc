@@ -1,6 +1,11 @@
 {
-  "extends": "airbnb-base",
+  "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
+  "env": { "es6": true, "browser": true },
+  "overrides": [{
+    "files": ["**/__tests__/*.js"],
+    "env": { "jest": true }
+  }],
   "rules": {
     "prettier/prettier": "error",
     "max-len": [
@@ -14,7 +19,8 @@
     ],
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.test.js", "**/*.config.js"] }
-    ]
+      { "devDependencies": ["**/__tests__/*.js", "**/*.config.js"] }
+    ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
 }

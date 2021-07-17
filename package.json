@@ -2,8 +2,9 @@
   "name": "test-calculator",
   "version": "1.0.0",
   "description": "A template repository with tests to build a calculator.",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
+    "start": "npm run test",
     "dev": "vite",
     "test": "jest",
     "prettier": "prettier --config .prettierrc 'src/**/*.{js,jsx,css}' --write",
@@ -22,9 +23,15 @@
   },
   "homepage": "https://github.com/indifferentghost/test-calculator#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
     "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "babel-jest": "^27.0.6",
+    "babel-preset-vite": "^1.0.4",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
@@ -32,11 +39,8 @@
     "lint-staged": "^11.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
-    "vite": "^2.4.2"
+    "vite": "^2.4.2",
+    "vite-jest": "^0.0.3"
   },
-  "dependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "babel-jest": "^27.0.6"
-  }
+  "dependencies": {}
 }
